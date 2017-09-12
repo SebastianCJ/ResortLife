@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/actividadLayout"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/desclayoutComentario"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/actividadImg"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/timelineblue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ceremonia Religiosa"
+            android:layout_toEndOf="@id/actividadImg"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:id="@+id/nombreActividad" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="1dp"
+            android:textColor="@color/black21"
+            android:id="@+id/descripcionTxt"
+            android:textSize="12sp"
+            android:layout_below="@id/nombreActividad"
+            android:layout_toEndOf="@id/actividadImg"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/descripcionTxt"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

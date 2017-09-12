@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.logvit.resortlife.Landing">
+
+    <RelativeLayout
+        android:id="@+id/landingTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/landing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landingTitulo"
+        android:layout_margin="15dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHome"
+            android:src="@mipmap/iconhome"
+            android:background="@drawable/gray_square"
+            android:padding="48dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGuide"
+            android:src="@mipmap/iconcityguide"
+            android:layout_toEndOf="@+id/btnHome"
+            android:background="@drawable/gray_square"
+            android:padding="48dp"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMessages"
+            android:layout_below="@+id/btnHome"
+            android:src="@mipmap/iconmessages"
+            android:background="@drawable/gray_square"
+            android:padding="50dp"
+            android:layout_alignStart="@+id/btnHome"
+            android:layout_marginEnd="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTransport"
+            android:layout_below="@+id/btnGuide"
+            android:layout_toEndOf="@+id/btnMessages"
+            android:src="@mipmap/icontransport"
+            android:background="@drawable/gray_square"
+            android:padding="50dp" />
+
+        <TextView
+            android:id="@+id/homeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnHome"
+            android:layout_alignTop="@+id/btnHome"
+            android:layout_alignEnd="@+id/btnHome"
+            android:layout_alignBottom="@+id/btnHome"
+            android:layout_margin="15dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Home"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/cityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnGuide"
+            android:layout_alignTop="@+id/btnGuide"
+            android:layout_alignEnd="@+id/btnGuide"
+            android:layout_alignBottom="@+id/btnGuide"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="City Guide"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/messageTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnMessages"
+            android:layout_alignTop="@+id/btnMessages"
+            android:layout_alignEnd="@+id/btnMessages"
+            android:layout_alignBottom="@+id/btnMessages"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Messages"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/transportTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnTransport"
+            android:layout_alignTop="@+id/btnTransport"
+            android:layout_alignEnd="@+id/btnTransport"
+            android:layout_alignBottom="@+id/btnTransport"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Transport"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/btnSos"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/landing"
+        android:src="@mipmap/iconsos"
+        android:padding="55dp"
+        android:background="@drawable/gray_square"/>
+
+    <TextView
+        android:id="@+id/sosTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSos"
+        android:layout_alignTop="@+id/btnSos"
+        android:layout_alignEnd="@+id/btnSos"
+        android:layout_alignBottom="@+id/btnSos"
+        android:layout_margin="15dp"
+        android:gravity="bottom|center_horizontal"
+        android:text="SOS"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

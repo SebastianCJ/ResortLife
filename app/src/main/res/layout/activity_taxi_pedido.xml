@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.logvit.resortlife.TaxiInicio">
+
+    <RelativeLayout
+        android:id="@+id/taxiTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/requestLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taxiTitulo"
+        android:background="@color/aqua">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request Transportation"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/btnTransporte"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/requestLayout"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/startTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting Point"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startHotel"
+            android:src="@mipmap/iconhotel"
+            android:background="@drawable/gray_square"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:layout_below="@id/startTxt"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/hotelDestinationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/startHotel"
+            android:layout_alignTop="@+id/startHotel"
+            android:layout_alignEnd="@+id/startHotel"
+            android:layout_alignBottom="@+id/startHotel"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Hotel"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startMap"
+            android:src="@mipmap/iconmarker"
+            android:background="@drawable/gray_squaretwo"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="70dp"
+            android:layout_alignTop="@+id/startHotel"
+            android:layout_toEndOf="@+id/startHotel" />
+
+        <TextView
+            android:id="@+id/mapTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/startMap"
+            android:layout_alignTop="@+id/startMap"
+            android:layout_alignEnd="@+id/startMap"
+            android:layout_alignBottom="@+id/startMap"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Use Map"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/destinationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/startHotel"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/destinationHotel"
+            android:src="@mipmap/iconhotel"
+            android:background="@drawable/gray_square"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:layout_below="@id/destinationTxt"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/hotelTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/destinationHotel"
+            android:layout_alignTop="@+id/destinationHotel"
+            android:layout_alignEnd="@+id/destinationHotel"
+            android:layout_alignBottom="@+id/destinationHotel"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Hotel"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/destinationMap"
+            android:src="@mipmap/iconmarker"
+            android:background="@drawable/gray_squaretwo"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="70dp"
+            android:layout_alignTop="@+id/destinationHotel"
+            android:layout_toEndOf="@+id/destinationHotel" />
+
+        <TextView
+            android:id="@+id/mapDestinationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/destinationMap"
+            android:layout_alignTop="@+id/destinationMap"
+            android:layout_alignEnd="@+id/destinationMap"
+            android:layout_alignBottom="@+id/destinationMap"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Use Map"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/landing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTransporte">
+        <TextView
+            android:id="@+id/commentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indicates any comments for the transport."
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Comments"
+            android:gravity="start"
+            android:id="@+id/mensajeTxt"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_below="@id/commentTxt" />
+
+        <Button
+            android:id="@+id/requestBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aqua_border"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:text="Request Transportation"
+            android:layout_below="@id/mensajeTxt"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.logvit.resortlife.Home"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/homeTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/homeTitulo">
+
+        <com.tmall.ultraviewpager.UltraViewPager
+        android:id="@+id/ultra_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tituloTxt"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="@color/botones"
+        android:layout_below="@+id/viewPager"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/descTxt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:textColor="@color/gris"
+        android:layout_below="@+id/tituloTxt"/>
+
+</RelativeLayout>

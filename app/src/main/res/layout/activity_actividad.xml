@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.logvit.resortlife.Actividad">
+
+    <RelativeLayout
+        android:id="@+id/actividadTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actividadTitulo">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actividadImg"
+            android:background="@mipmap/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tituloActividad"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Manta"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/actividadImg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descTxt"
+            android:layout_below="@id/tituloActividad"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/direccionTxt"
+            android:layout_below="@id/descTxt"
+            android:text="The Cape Hotel"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"/>
+
+        <Button
+            android:id="@+id/reservarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aqua_border"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:text="Make a Reservation"
+            android:padding="15dp"
+            android:layout_below="@id/direccionTxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+        <Button
+            android:id="@+id/mapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aqua_border"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="42dp"
+            android:paddingEnd="42dp"
+            android:text="Open Map"
+            android:layout_toEndOf="@id/reservarBtn"
+            android:layout_below="@id/direccionTxt"/>
+        <Button
+            android:id="@+id/requestBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aqua_border"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:text="Request Transportation"
+            android:layout_below="@id/reservarBtn"
+            android:layout_margin="15dp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

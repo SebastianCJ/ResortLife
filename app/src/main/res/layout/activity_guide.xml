@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.logvit.resortlife.CityGuide">
+
+
+    <RelativeLayout
+        android:id="@+id/landingTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searchbar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landingTitulo"
+        android:background="@color/gris">
+
+        <EditText
+            android:id="@+id/buscarTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:hint="Search"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/searchbar" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.logvit.resortlife.Login"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoLogin"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/logo"
+        android:layout_marginTop="25dp"/>
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/emailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/border_azul"
+                android:drawableStart="@mipmap/iconuser"/>
+
+            <EditText
+                android:id="@+id/passwordTxt"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/border_azul"
+                android:drawableStart="@mipmap/iconlock"/>
+
+
+        <Button
+            android:id="@+id/signin"
+            android:textColor="@color/white"
+            android:layout_margin="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/border_azul"
+            android:text="@string/action_sign_in_short"
+            android:padding="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="25dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:drawablePadding="10dp"
+            android:drawableStart="@mipmap/iconlogin"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgotpass"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

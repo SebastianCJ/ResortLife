@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/landingTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/botones"
+            android:layout_below="@+id/logo"/>
+        <ImageView
+            android:id="@+id/btnMenuOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btnMenuClose"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btnmenu"
+            android:layout_alignTop="@+id/btnMenuOpen"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:background="@mipmap/logobarra"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searchbar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landingTitulo"
+        android:background="@color/gris">
+
+        <EditText
+            android:id="@+id/buscarTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:hint="Search"
+            android:textColor="@android:drawable/arrow_down_float"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/drawer_layout">
+        <RelativeLayout
+            android:id="@+id/timelineTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/calendarioNull"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="No se encontraron Actividades Disponibles"
+                android:textSize="14sp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/postContainer"
+            android:layout_below="@+id/timelineTitulo"
+            android:layout_marginTop="55dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:id="@+id/timelineHead">
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_marginTop="95dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/eventContainerCalendario"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/searchbar" />
+
+        <ListView
+            android:id="@+id/drawer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|start"
+            android:layout_below="@+id/timelineTitulo"
+            android:background="@color/white" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
